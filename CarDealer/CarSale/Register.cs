@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarNameSpace;
+using RepositoryNameSpace;
 
 namespace CarSale
 {
+
     public partial class Register : Form
     {
+        Repository repoLager = new Repository();
+
+        //public string Make = "BMW";
 
         public Register()
         {
@@ -73,6 +79,7 @@ namespace CarSale
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            //CarInfo Make = "BMW";
 
         }
 
@@ -83,6 +90,24 @@ namespace CarSale
 
             NewLager.ShowDialog();
             this.Close();
+        }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Console.WriteLine("{0}", Make);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            CarInfo c = new CarInfo() { Make = textBox1.Text, Model = textBox2.Text, Regnr = textBox3.Text, Kilometer = textBox4.Text, Price = textBox5.Text };
+            repoLager.Save(c);
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            listBox1.Items.Add(c);
+            
         }
     }
 }

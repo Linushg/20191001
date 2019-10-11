@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace CarSale
 {
+
+
+    //public myCarList = new List Cars;
+
     public partial class Lager : Form
     {
         public Lager()
@@ -37,5 +41,10 @@ namespace CarSale
             NewRegister.ShowDialog();
             this.Close();
         }
+        
+        //foreach (CarInfo c in _repo.Get())
+          //  {
+            //listbox1.Items.Add(c);
+            //}
     }
 }

@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarInfo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarNameSpace\CarNameSpace.csproj">
+      <Project>{1a8505e2-e7ad-473d-9318-3b5ef8517c2a}</Project>
+      <Name>CarNameSpace</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RepositoryNameSpace\RepositoryNameSpace.csproj">
+      <Project>{4134aa33-6aaa-4952-b53c-0f1dc68885b8}</Project>
+      <Name>RepositoryNameSpace</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
